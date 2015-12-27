@@ -6,7 +6,8 @@ with open(filename, "r") as ins:
     for line in ins:
         if (line_num % 4 == 0):
             print(">" + line[1:], end="")
-        if (line_num % 4 == 1):
+            line_num = 0
+        if (line_num  == 1):
             print(line, end = "")
         line_num = line_num + 1
 

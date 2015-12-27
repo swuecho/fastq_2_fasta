@@ -10,7 +10,7 @@ while (my $line= <$fh>) {
         print(">". substr($line, 1));
         $line_num = 0;
     }
-    if ($line_num % 4 == 1) {
+    if ($line_num  == 1) {
         print($line);
     }
 
