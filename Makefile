@@ -5,6 +5,8 @@ test: compile
 	time bin/fastq_2_fasta_c data/SRR062634.filt.fastq >result/c.fasta
 	time bin/fastq_2_fasta_cpp data/SRR062634.filt.fastq >result/cpp.fasta
 	time bin/fastq_2_fasta_go data/SRR062634.filt.fastq >result/go.fasta
+	time perl fastq_2_fasta.pl data/SRR062634.filt.fastq >result/perl.fasta
+	time python3 fastq_2_fasta.py data/SRR062634.filt.fastq >result/python.fasta
 
 compile:
 	gcc -o bin/fastq_2_fasta_c -s fastq_2_fasta_get_line.c
