@@ -21,9 +21,9 @@ int main(int argc, char * argv[])
      while ((read = getline(&line, &len, fp)) != -1) {
          if ( line_num % 4 == 0) {
             printf(">%s", line+1); /* discart first char @ in seq id */
-            line_num == 0;
+            line_num = 0;
          }
-         if ( line_num % 4 == 1 ) {
+         if ( line_num  == 1 ) {
             printf("%s", line);
          }
        line_num++;

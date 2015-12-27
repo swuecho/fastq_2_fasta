@@ -10,8 +10,9 @@ int main(int argc, char * argv[])
     while (std::getline(file, line)) {
          if ( line_num % 4 == 0) {
             std::cout << line.replace(0,1,">") << std::endl;
+            line_num = 0;
          }
-         if ( line_num % 4 == 1 ) {
+         if ( line_num == 1 ) {
             std::cout << line << std::endl;
          }
        line_num++;

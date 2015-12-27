@@ -23,7 +23,7 @@ func main() {
 			fmt.Println(scanner.Text()[1:])
 			line_num = 0
 		}
-		if line_num%4 == 1 {
+		if line_num == 1 {
 			fmt.Println(scanner.Text())
 		}
 		line_num++
