@@ -3,18 +3,21 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(void)
+int main(int argc, char * argv[])
    {
-     char *filename = "x.fastq";
+     char *filename;
      FILE * fp;
      char * line = NULL;
      size_t len = 0;
      ssize_t read;
      int line_num = 0;
 
+     filename = argv[1];
+
      fp = fopen(filename, "r");
      if (fp == NULL)
        exit(EXIT_FAILURE);
+
      while ((read = getline(&line, &len, fp)) != -1) {
          if ( line_num % 4 == 0) {
             printf(">%s", line+1); /* discart first char @ in seq id */
@@ -24,11 +27,12 @@ int main(void)
             printf("%s", line);
          }
        line_num++;
-
      }
 
      fclose(fp);
+
      if (line)
        free(line);
+
      exit(EXIT_SUCCESS);
 }
