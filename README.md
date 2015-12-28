@@ -1,5 +1,7 @@
 # fastq_2_fasta
 
+## Program
+
 assume every record is 4 lines.
 
 1. seq_id
@@ -9,9 +11,13 @@ assume every record is 4 lines.
 
 other variant of FASTQ format are not supported!
 
+
+## Data
 file in data is from 
 
 ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/HG00096/sequence_read/SRR062634.filt.fastq.gz
+
+## Result
 
 ```
 time bin/fastq_2_fasta_c data/SRR062634.filt.fastq >result/c.fasta
