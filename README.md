@@ -1,5 +1,14 @@
 # fastq_2_fasta
 
+assume every record is 4 lines.
+
+1. seq_id
+2. seq
+3. +
+4. qual
+
+other variant of FASTQ format are not supported!
+
 file in data is from 
 
 ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/HG00096/sequence_read/SRR062634.filt.fastq.gz
