@@ -8,7 +8,9 @@ void main(string[] args)
     while (!file.eof()) {
         string line = chomp(file.readln());
         if ( line_num % 4 == 0) {
-            writeln(">", line[1..$]);
+            if (line.length > 0) {
+                writeln(">", line[1..$]);
+            }
             line_num = 0;
         }
         if ( line_num == 1 ) {
