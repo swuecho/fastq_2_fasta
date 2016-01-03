@@ -8,6 +8,7 @@ void main(string[] args)
     while (!file.eof()) {
         string line = chomp(file.readln());
         if ( line_num % 4 == 0) {
+            // remove this line
             if (line.length > 0) {
                 writeln(">", line[1..$]);
             }
