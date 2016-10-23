@@ -15,6 +15,6 @@ compile:
 	go build fastq_2_fasta_go.go; mv fastq_2_fasta_go bin/
 	g++ -o bin/fastq_2_fasta_cpp -s fastq_2_fasta_cpp.cpp
 	dmd fastq_2_fasta.d -of./bin/fastq_2_fasta_d 
-	rustc -o bin/fastq_2_fasta_rs fastq_2_fasta.rs
+	rustc -O  -o bin/fastq_2_fasta_rs fastq_2_fasta.rs
 
 
